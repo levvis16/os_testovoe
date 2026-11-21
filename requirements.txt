@@ -1,4 +1,4 @@
 Fastapi
 Pydantic
-
+python-dotenv
 
