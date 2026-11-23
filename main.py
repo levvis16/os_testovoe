@@ -12,5 +12,9 @@ app = FastAPI(
 )
 
 app.include_router(bookings_router)
-#добавить логирование в проект
-#добавить pytest, необходимо будет написать несколько юнит-тестов для покрытия работы с бд и с роутерами
+
+
+@app.get("/health")
+def health_check():
+    """Health check endpoint for monitoring."""
+    return {"status": "ok"}
